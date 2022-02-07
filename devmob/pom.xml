@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.4.1</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.test.devmob</groupId>
+	<artifactId>devmob</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>devmob</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>11</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web-services</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- AOP dependency -->
+		<!-- DevmobApplication.java에 어노테이션 추가 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		
+		<!-- 웹 애플리케이션 실행을 위한 의존성 - Tomcat -->
+		<dependency> 
+			<groupId>org.apache.tomcat.embed</groupId> 
+			<artifactId>tomcat-embed-jasper</artifactId> 
+			<scope>provided</scope> 
+		</dependency>
+		
+		<!-- thymeleaf 서버 사이드 자바 템플릿 엔진 -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		
+		<!-- jstl dependency --> 
+		<dependency> 
+			<groupId>javax.servlet</groupId> 
+			<artifactId>jstl</artifactId> 
+		</dependency> 
+		
+		<dependency>
+		    <groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+	    </dependency>
+		
+		<!-- 수정작업 시 서버 재시작 --> 
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-devtools</artifactId>
+		    <scope>runtime</scope>
+		    <optional>true</optional>
+		</dependency>
+		
+		<!-- tiles dependency -->
+		<!-- Tiles 사용 관련 Bean 생성 후 서버 시작 시 자동구동 -->
+		<dependency>
+	      <groupId>org.apache.tiles</groupId>
+	      <artifactId>tiles-jsp</artifactId>
+	      <version>3.0.7</version>
+	  	</dependency>
+	  	
+	  	<!-- lombok 라이브러리--> 
+	  	<!-- 생성자, getter, setter, toString 등의 작업을 어노테이션으로 처리할 수 있다 -->
+	  	<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <scope>provided</scope>
+		</dependency>
+		
+		<!-- hibernate(ORM 프레임워크)에서 사용하는 인터페이스 -->
+		<!-- 객체와 관계형 데이터베이스의 데이터를 매핑시켜준다. / 
+		SQL에 종속되지 않고 비즈니스 로직에 집중해서 개발이 가능 -->
+		<!-- JPA(Java Persistence API)  - Windchill의 PersistenceHelper.manager로 생각 --> 
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		
+		<!-- MariaDB --> 
+		<dependency> 
+			<groupId>org.mariadb.jdbc</groupId> 
+			<artifactId>mariadb-java-client</artifactId> 
+		</dependency>
+
+		<!-- jquery --> 
+		<dependency>
+           <groupId>org.webjars</groupId>
+           <artifactId>jquery</artifactId>
+           <version>3.4.1</version>
+       </dependency> 
+       
+       <!-- json --> 
+	   <dependency>
+          <groupId>com.google.code.gson</groupId>
+          <artifactId>gson</artifactId>
+       </dependency> 
+       
+       <!-- Spring security --> 
+       <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
